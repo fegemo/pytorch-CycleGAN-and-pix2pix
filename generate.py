@@ -60,9 +60,8 @@ if __name__ == '__main__':
     opt.serial_batches = True  # disable data shuffling; comment this line if results on randomly chosen images are needed.
     opt.no_flip = True    # no flip; comment this line if results on flipped images are needed.
     opt.display_id = -1   # no visdom display; the test code saves the results to a HTML file.
-    dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     
-    
+    checkpoint_name = opt.name    
     model = create_model(opt)      # create a model given opt.model and other options
     model.setup(opt)               # regular setup: load and print networks; create schedulers
 
@@ -91,7 +90,7 @@ if __name__ == '__main__':
         plt.gca().xaxis.set_major_locator(plt.NullLocator())  # No x ticks
         plt.gca().yaxis.set_major_locator(plt.NullLocator())  # No y ticks
         plt.gca().set_frame_on(False)                         # No border frame
-        plt.savefig(f"./{file_name}")
+        plt.savefig(f"./{checkpoint_name}_{file_name}")
         plt.close()
 
 
