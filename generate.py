@@ -67,7 +67,7 @@ if __name__ == '__main__':
     model.setup(opt)               # regular setup: load and print networks; create schedulers
 
     # load the image
-    for url in opt.urls:
+    for url in opt.urls.split(","):
         file_name = os.path.basename(url)
 
         source_image = load_image(url)
