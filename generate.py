@@ -91,7 +91,7 @@ if __name__ == '__main__':
         plt.gca().xaxis.set_major_locator(plt.NullLocator())  # No x ticks
         plt.gca().yaxis.set_major_locator(plt.NullLocator())  # No y ticks
         plt.gca().set_frame_on(False)                         # No border frame
-        plt.savefig(f"./{file_name")
+        plt.savefig(f"./{file_name}")
         plt.close()
 
 
